@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Assignment 2</title>
+</head>
+<body>
+    <div id = 'main'>
+        <aside id = "left"></aside>
+        <div id = 'main_wrapper'>
+            <h2>Basic Details</h2>  
+            <form action="submit">
+                    <ul >
+                        <li class="marginRight"><label for="Name" id="name">First Name</label><br><input type="text" name="" id="Name" onfocus="changeColor('name')" onblur="revert('name');checkVisibility(this.id)" tabindex="0"><span class="check">&check;</span><span class="cross">&cross;</span></li>
+                        <li><label for="Surname" id="surname">Last Name</label><br><input type="text" name="" id="Surname" onfocus="changeColor('surname')" onblur="revert('surname');checkVisibility(this.id)" tabindex="1"><span class="check">&check;</span><span class="cross">&cross;</span></li>
+                        <li class="marginRight"><label for="EmailID" id="emailID">Email ID</label><br><input type="text" name="" id="EmailID" onfocus="changeColor('emailID')" onblur="revert('emailID');checkVisibility(this.id)" tabindex="2"><span class="check">&check;</span><span class="cross">&cross;</span></li>
+                        <li><label for="UserID" id="userID">Your user ID</label><br><input type="text" name="" id="UserID" onfocus="changeColor('userID')" onblur="revert('userID');checkVisibility(this.id)" tabindex="5"><span ><i class="material-icons" id="lock">&#xe899;</i></span></li>
+                        <li class="marginRight"><label for="country" id="country1">Country</label><br><select name="country" id="country" onfocus="changeColor('country1')" onblur="revert('country1')" onchange="populate('country','state','city')">
+                            <option value="0">Select Country</option>
+                            <option value="1" style="background-image:url('australia.png')">Australia </option>
+                            <option value="2">Canada</option>
+                            <option value="3">China</option>
+                            <option value="4">France</option>
+                            <option value="5">Germany</option>
+                            <option value="6">Italy</option>
+                            <option value="7">Russia</option>
+                            <option value="8">South Korea</option>
+                            <option value="9">United Kingdoms</option>
+                            <option value="10">United States</option>
+                        </select></li>
+                        <li style="margin-right: 40px"><label for="state" id="state1">State</label><br><select class= "drop-down" name="state" id="state" onfocus="changeColor('state1')" onblur="revert('state1')"></select> </li>
+                        <li><label for="city"id="city1">City</label><br><select class= "drop-down" name="" id="city" onfocus="changeColor('city1')" onblur="revert('city1')"></select></li>
+                        <li class="marginRight"><label for="TelNumber" id="telNum">Telephone Number</label><br><input type="text" name="" id="TelNumber" onfocus="changeColor('telNum')" onblur="revert('telNum');checkVisibility(this.id)" tabindex="3"><span class="check">&check;</span><span class="cross">&cross;</span></li>
+                        <li><input type="text" placeholder = "Reference Code" name="" id="Reference" onblur="checkVisibility(this.id)" tabindex="4"><span class="check">&check;</span><span class="cross">&cross;</span></li>
+                        <br>
+                        <fieldset>
+                            <button type="reset" id="reset" onclick="hiddenAll()">Reset All</button>
+                            <button type="submit" id="continue" style="margin-right: 40px;">Continue</button>
+                        </fieldset>
+                        
+                    </ul>
+            </form>
+        </div>
+        <aside id = "right"></aside>
+        <script src="appearance.js">
+            
+        </script>
+    </div>
+</body>
+</html>
