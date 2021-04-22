@@ -1,0 +1,160 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Calibri;
+    font-weight: 540;
+}
+
+#main{
+    background-color: #e8e8e8;
+    display: grid;
+    grid-template-columns: 0.4fr 3fr 0.05fr;
+    grid-template-rows: 188.7%;
+    grid-column-gap: 0;
+}
+
+#left{
+    background-color: #48a5ea;
+}
+
+#right{
+    background-color: #e8e8e8;
+}
+#main_wrapper{
+    background-color: white;
+    padding: 30px 50px 0px 40px;
+}
+
+h2{
+    color: #48a5ea;
+    margin-bottom: 25px;
+    padding-bottom: 40px;
+    border-bottom: 0.1px solid #e0e0e0;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px;
+    
+}
+
+ul{
+    list-style: none;
+    width: 200%;
+}
+
+li{
+    display: inline-block;
+    margin: 8px;
+    margin-left: 10px;
+    border: none;
+     
+}
+
+label{
+    font-size: 15px;
+    color: #cccccc;;
+    font-weight: 380;
+}
+
+#city_state{
+    display: inline-block;
+}
+
+input, select{
+    border: none;
+    margin-bottom: 10px;
+    width: 510px;
+    color: black;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #cccccc;   
+    
+}
+
+.drop-down{
+    width: 230px;
+    margin-right: 20%;
+}
+
+input:focus, select:focus {
+    border-bottom: 1px solid #48a5ea;
+}
+
+input:focus, select:focus, button:focus {
+    outline-width: 0;
+    
+}
+fieldset{
+    border: none;
+    border-top: 0.1px solid #e0e0e0;
+    margin-top: 20px;
+    padding-top: 25px;
+}
+button{
+    padding: auto;
+    height: 38px;
+}
+
+#reset{
+    border: none;
+    background-color: white;
+    color: lightgray;
+    font-size: 16px;
+}
+#reset:hover{
+    color: #48a5ea
+}
+
+#continue{
+    float: right;
+    font-size: 16px;
+    width: 110px;
+    background-color: #48a5ea;
+    color: white;
+    border: none;
+    border-radius: 18px;
+}
+
+#continue:hover{
+    border: 1px solid #48a5ea;
+    background-color: white;
+    color: #48a5ea;
+}
+
+.marginRight{
+    margin-right: 40px;
+}
+
+span{
+    display: absolute;
+    margin-left: -13px;
+    visibility: hidden;
+}
+
+i{
+    margin-left: -5px;
+    color: red;
+}
+
+.check{
+    color: green;
+}
+
+.cross{
+    color: red;
+}
+
+select option {
+    background: #48a5ea;
+    color: white;
+}
+
+option[value = "0"] {
+    color: black;
+}
