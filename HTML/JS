@@ -1,0 +1,279 @@
+function changeColor(n) {
+    let c = document.getElementById(n);
+    c.style.color = "#48A5EA";
+    
+}
+function revert(n) {
+    let c = document.getElementById(n);
+    c.style.color = "#cccccc";
+}
+
+
+let cities = ["Sunshine Coast","Geelong","Wales Orange","Miramichi","Thompson","Columbia Castlegar","Hefei","Lanzhou","Xining","Bordeaux","Reims","Nimes","Wiesbaden","Stuttgart","Saarbrücken","Rome","Palermo","Brescia","Maykop","Cheboksary","Syktyvkar","Asan","Chuncheon","Gimje","Bangor","Carlisle","Armagh","Montgomery","Topeka","Jefferson City"]
+
+function populate(x,y,z){
+    document.getElementById('state').innerText = null;
+    document.getElementById('city').innerText = null;
+    let countries = document.getElementById(x);
+    let states = document.getElementById(y);
+    let optionArray = [];
+    let strUser = countries.options[countries.selectedIndex].text;
+    switch (strUser) {
+        case "Australia":
+            optionArray = ["Select State","Queensland","Victoria","New South"]
+            break;
+        case "Canada":
+            optionArray = [" Select State","New Brunswick","Manitoba","British",]
+            break;
+        case "China":
+            optionArray = [" Select State","Anhui","  Gansu","Qinghai"]
+            break;
+        case "France":
+            optionArray = [" Select State","New Aquitaine","Great East","Occitania"]
+            break;
+        case "Germany":
+            optionArray = [" Select State","Hesse","Baden-Württemberg","Saarland"]
+            break;
+        case "Italy":
+            optionArray = [" Select State","Lazio","Sicily","Lombardy"]
+            break;
+        case "Russia":
+            optionArray = [" Select State","Adygea","Chuvashia","Komi"]
+            break;
+        case "South Korea":
+            optionArray = [" Select State","South Chungcheong","Gangwon","North Jeolla"]
+            break;
+        case "United Kingdoms":
+            optionArray = [" Select State","Wales","North West, England","Northern Ireland"]
+            break;
+        case "United States":
+            optionArray = [" Select State","Alabama","Kansas","Missouri"]
+            break;
+    
+        default:
+            break;
+    }
+    
+    for (let i=0; i < optionArray.length; i++) {
+		states.options[states.length] = new Option(optionArray[i]);
+	}
+
+	states.onchange = function(){
+	populateCities(countries, states, z);
+	};
+}
+
+
+function populateCities(x,y,z){
+    document.getElementById('city').innerText = null;
+    let city = document.getElementById(z);
+    let countrySelect = x.selectedIndex;
+    let strUser = y.selectedIndex;
+    city.options[0] = new Option("Select City");
+    switch (countrySelect) {
+        case 1:
+                switch (strUser) {
+                    case 1:
+                            city.options[city.length] = new Option(cities[0]);
+                        break;
+                    case 2:
+                            city.options[city.length] = new Option(cities[1]);
+                        break;
+                    case 3:
+                        city.options[city.length] = new Option(cities[2]);
+                        break;
+                
+                    default:
+                        break;
+                            }
+            break;
+        case 2:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[3]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[4]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[5]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 3:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[6]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[7]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[8]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 4:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[9]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[10]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[11]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 5:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[12]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[13]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[14]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 6:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[15]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[16]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[17]);
+                    break;
+            
+                default:
+                    break;
+            }
+            
+            break;
+        case 7:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[18]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[19]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[20]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 8:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[21]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[22]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[23]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 9:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[24]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[25]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[26]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        case 10:
+            switch (strUser) {
+                case 1:
+                        city.options[city.length] = new Option(cities[27]);
+                    break;
+                case 2:
+                        city.options[city.length] = new Option(cities[28]);
+                    break;
+                case 3:
+                    city.options[city.length] = new Option(cities[29]);
+                    break;
+            
+                default:
+                    break;
+            }
+            break;
+        
+    
+        default:
+            break;
+    
+    }
+    city.options[city.length] = new Option(cities[j]);
+}
+
+    function checkVisibility(a){
+        let input = document.getElementById(a)
+        let check = document.getElementsByClassName('check')
+        let cross = document.getElementsByClassName('cross')
+        let lock = document.getElementById('lock')
+        
+        if (input.tabIndex == 5 && input.value == "") {
+            lock.style.visibility = "visible"
+            lock.style.color = "#FF0000"
+        }
+        else if (input.tabIndex == 5 && input.value != "") {
+            lock.style.visibility = "visible"
+            lock.style.color = "#808080"
+        }
+        if (input.value == "") {
+            cross[input.tabIndex].style.visibility = "visible";
+            check[input.tabIndex].style.visibility = "hidden";
+        }
+        else if (input.value != ""){
+            check[input.tabIndex].style.visibility = "visible";
+            cross[input.tabIndex].style.visibility = "hidden";
+        }
+    }
+
+    function hiddenAll(){
+        let check = document.getElementsByClassName('check')
+        let cross = document.getElementsByClassName('cross')
+        let lock = document.getElementById('lock')
+        lock.style.visibility = "hidden"
+        for (let i = 0; i < check.length; i++) {
+            check[i].style.visibility = "hidden";
+            cross[i].style.visibility = "hidden";            
+        }
+    }
+
+
